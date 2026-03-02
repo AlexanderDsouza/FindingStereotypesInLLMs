@@ -55,7 +55,7 @@ To set up the environment, clone the repository and install the dependencies:
 
 ```bash
 pip install -r requirements.txt
----
+```
 
 ## 🎓 Citation
 If you use this code or these findings in your research, please cite:
