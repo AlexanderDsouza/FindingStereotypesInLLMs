@@ -3,8 +3,9 @@
 This repository contains the code and experimental results for my Master's Thesis in Computer Science at the University of California, Davis. The project investigates the internal mechanisms of GPT-2 and Llama 3.2 to determine if societal stereotypes are localized in specific "bias neurons" or distributed across the model's residual stream, and if we can edit the LLM to reduce generation of stereotypes without hampering its language modeling score.
 
 ## 🚀 Key Insights
+* **Subset of Impacting Neurons:** A small subset of neurons cause a probe to be unable to differentiate between stereotypical and antistereotypical activations in Decoder LLMs. 
 * **The Pathway Hypothesis:** Stereotypes are not "bugs" isolated in specific neurons; they are distributed directions in the residual stream. 
-* **Early Encoding:** Word Token Embeddings (WTE) alone can classify stereotypical vs. anti-stereotypical sentences with **73.4% accuracy** before a single attention layer is applied.
+* **Early Encoding:** Word Token Embeddings (WTE) alone can classify stereotypical vs. anti-stereotypical sentences with **73% accuracy** before a single attention layer is applied.
 * **High-Ratio Outliers:** We identified individual neurons with activation ratios as high as $7 \times 10^5$ for stereotypical prompts, yet single-neuron ablation yields marginal causal shifts ($<0.15\%$), proving significant model redundancy. 
 
 ---
