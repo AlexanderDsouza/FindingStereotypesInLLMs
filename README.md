@@ -18,18 +18,17 @@ The experimental work is split into two primary methodologies:
 **Goal:** Locate "Contrastive Neurons" using a framework inspired by Contrastive Explanations for Anomaly Detection (CXAD).
 * Extracts activations from WTE, Multi-Head Attention (MHA), and Feed-Forward Network (FFN) layers.
 * Calculates relative activation ratios to identify neurons that "over-activate" for stereotypes.
-* Explores the "WTE vs. Positional" hypothesis to determine if bias is embedded at the entry point of the model.
 
 ### 2. `Attention_Heads_Second_Experiment_GPT2.ipynb`
 **Goal:** Map "Bias Fingerprints" specifically within the GPT-2 Small architecture.
 * Trains a supervised Multi-Layer Perceptron (MLP) probe on frozen internal activations.
-* Utilizes **Monte Carlo Shapley values** to identify the top 10% of attention heads driving biased classifications.
+* Utilizes **Monte Carlo Shapley values** to identify the top impacting attention heads driving biased classifications.
 * Performs causal intervention (ablation) and evaluates performance using StereoSet metrics.
+* Explores the "WTE vs. Positional" hypothesis to determine if bias is embedded at the entry point of the model.
 
 ### 3. `Attention_Heads_Second_Experiment_Llama.ipynb`
 **Goal:** Scalability and verification on modern architectures (Llama 3.2 1B).
 * Replicates the probing and Shapley value methodology on a larger, more modern decoder-only model.
-* Compares the localization of bias between GPT-2 and Llama 3.2.
 * Demonstrates that while Llama is more sophisticated, it shares similar "bias pathways" in the residual stream.
 
 ---
